@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NeuroPuzzleGame:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NeuroPuzzleGame_jar</output-path>
+    <root id="archive" name="NeuroPuzzleGame.jar">
+      <element id="module-output" name="NeuroPuzzleGame" />
+    </root>
+  </artifact>
+</component>

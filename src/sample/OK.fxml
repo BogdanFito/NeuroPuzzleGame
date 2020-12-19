@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="875.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="546.0" layoutY="337.0">
+         <image>
+            <Image url="@../resources/cool.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="713.0" layoutY="396.0" prefHeight="82.0" prefWidth="554.0" text="Ура! Все получилось!">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

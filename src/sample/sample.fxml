@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="875.0" prefWidth="1800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fx:id="brain" fitHeight="842.5" fitWidth="820.0" layoutX="880.0" layoutY="29.0">
+         <image>
+            <Image url="@../resources/brain_t.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="medulla" fitHeight="333.0" fitWidth="218.0" layoutX="352.0" layoutY="542.0">
+         <image>
+            <Image url="@../resources/medulla.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="diencephalon" fitHeight="333.0" fitWidth="515.0" layoutX="95.0" layoutY="117.0">
+         <image>
+            <Image url="@../resources/diencephalon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="midbrain" fitHeight="192.0" fitWidth="202.0" layoutX="823.0" layoutY="666.0">
+         <image>
+            <Image url="@../resources/midbrain.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cerebellum" fitHeight="297.0" fitWidth="327.0" layoutX="46.0" layoutY="14.0">
+         <image>
+            <Image url="@../resources/cerebellum.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bridge" fitHeight="167.0" fitWidth="131.0" layoutX="396.0" layoutY="72.0">
+         <image>
+            <Image url="@../resources/bridge.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="frontal" fitHeight="512.0" fitWidth="447.0" layoutY="301.0">
+         <image>
+            <Image url="@../resources/frontal.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="parietal" fitHeight="440.0" fitWidth="391.0" layoutX="478.0" layoutY="322.0">
+         <image>
+            <Image url="@../resources/parietal.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="occipital" fitHeight="363.0" fitWidth="243.0" layoutX="552.0">
+         <image>
+            <Image url="@../resources/occipital.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="1262.0" layoutY="373.0">
+         <image>
+            <Image url="@../resources/thalamus_t.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="22.0" layoutX="1207.0" layoutY="492.0">
+         <image>
+            <Image url="@../resources/hypothalamus_t.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="thalamus" fitHeight="151.0" fitWidth="144.0" layoutX="780.0" layoutY="95.0">
+         <image>
+            <Image url="@../resources/thalamus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hypothalamus" fitHeight="143.0" fitWidth="131.0" layoutX="900.0" layoutY="523.0">
+         <image>
+            <Image url="@../resources/hypothalamus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="one" layoutX="1025.0" layoutY="117.0">
+         <image>
+            <Image url="@../resources/one.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="two" layoutX="1372.0" layoutY="136.0">
+         <image>
+            <Image url="@../resources/two.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="three" layoutX="1565.0" layoutY="334.0">
+         <image>
+            <Image url="@../resources/three.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="four" layoutX="1459.0" layoutY="530.0">
+         <image>
+            <Image url="@../resources/four.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="five" layoutX="1276.0" layoutY="653.0">
+         <image>
+            <Image url="@../resources/five.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="six" layoutX="1242.0" layoutY="511.0">
+         <image>
+            <Image url="@../resources/six.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="seven" layoutX="1053.0" layoutY="562.0">
+         <image>
+            <Image url="@../resources/seven.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="eight" layoutX="974.0" layoutY="501.0">
+         <image>
+            <Image url="@../resources/eight.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="nine" layoutX="880.0" layoutY="441.0">
+         <image>
+            <Image url="@../resources/nine.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ten" layoutX="1143.0" layoutY="254.0">
+         <image>
+            <Image url="@../resources/ten.png" />
+         </image>
+      </ImageView>
+
+      <TableView fx:id="table" layoutX="158.0" layoutY="206.0" prefHeight="440.0" prefWidth="579.0">
+        <columns>
+          <TableColumn fx:id="number" prefWidth="133.6000213623047" text="№ отдела" />
+          <TableColumn fx:id="titles" minWidth="0.0" prefWidth="442.39996337890625" text="Название" />
+        </columns>
+      </TableView>
+      <Label fx:id="text" alignment="CENTER" layoutX="158.0" layoutY="136.0" prefHeight="69.0" text="Отделы мозга" prefWidth="586.0" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="button" alignment="CENTER" layoutX="157.0" layoutY="670.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="579.0" text="Проверить ответы">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Line fx:id="line1" endX="146.0" endY="-75.5999755859375" layoutX="1126.0" layoutY="562.0" startX="22.800048828125" startY="34.800048828125" />
+      <Line fx:id="line2" endX="135.4000244140625" endY="-27.600006103515625" layoutX="1083.0" layoutY="530.0" startX="-27.0" startY="17.20001220703125" />
+      <Line fx:id="line3" endX="244.0" endY="-96.39999389648438" layoutX="1032.0" layoutY="486.0" startX="-77.5999755859375" startY="-3.0517578125E-5" />
+      <RadioButton fx:id="ru_button" layoutX="1746.0" layoutY="831.0" mnemonicParsing="false" text="ru" />
+      <RadioButton fx:id="en_button" layoutX="1746.0" layoutY="849.0" mnemonicParsing="false" text="en" />
+
+   </children>
+</AnchorPane>
