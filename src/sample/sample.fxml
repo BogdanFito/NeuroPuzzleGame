@@ -129,18 +129,18 @@
          </image>
       </ImageView>
 
-      <TableView fx:id="table" layoutX="158.0" layoutY="206.0" prefHeight="440.0" prefWidth="579.0">
+      <TableView fx:id="table" layoutX="158.0" layoutY="206.0" prefHeight="425.0" prefWidth="579.0">
         <columns>
           <TableColumn fx:id="number" prefWidth="133.6000213623047" text="№ отдела" />
           <TableColumn fx:id="titles" minWidth="0.0" prefWidth="442.39996337890625" text="Название" />
         </columns>
       </TableView>
-      <Label fx:id="text" alignment="CENTER" layoutX="158.0" layoutY="136.0" prefHeight="69.0" text="Отделы мозга" prefWidth="586.0" textAlignment="CENTER">
+      <Label fx:id="text" alignment="CENTER" layoutX="158.0" layoutY="136.0" prefHeight="69.0" prefWidth="586.0" text="Отделы мозга" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="button" alignment="CENTER" layoutX="157.0" layoutY="670.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="579.0" text="Проверить ответы">
+      <Button fx:id="button" alignment="CENTER" layoutX="157.0" layoutY="651.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="579.0" text="Проверить ответы">
          <font>
             <Font size="24.0" />
          </font>

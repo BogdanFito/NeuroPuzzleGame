@@ -11,9 +11,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.Line;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -132,6 +134,7 @@ public class Controller implements Initializable {
         for (ImageView imageView : numbers) {
             imageView.setVisible(false);
         }
+        ru_button.setTranslateY(ru_button.getTranslateY()+150); en_button.setTranslateY(en_button.getTranslateY()+150);
 
 
         ObservableList<String> langs = FXCollections.observableArrayList(
@@ -282,6 +285,11 @@ public class Controller implements Initializable {
                         Parent root = fxmlLoader.getRoot();
                         Stage stage1 = new Stage();
                         stage1.setScene(new Scene(root));
+                        stage1.setTitle("Neuro Puzzle");
+                       // primaryStage.setScene(new Scene(root, 1800, 875));
+                        stage1.getIcons().add(new Image("resources/icon.png"));
+                        stage1.setResizable(false);
+                        stage1.setMaximized(true);
                         stage1.initModality(Modality.APPLICATION_MODAL);
                         stage1.showAndWait();
                     } else {
@@ -300,6 +308,11 @@ public class Controller implements Initializable {
                         Parent root = fxmlLoader.getRoot();
                         Stage stage1 = new Stage();
                         stage1.setScene(new Scene(root));
+                        stage1.setTitle("Neuro Puzzle");
+                        // primaryStage.setScene(new Scene(root, 1800, 875));
+                        stage1.getIcons().add(new Image("resources/icon.png"));
+                        stage1.setResizable(false);
+                        stage1.setMaximized(true);
                         stage1.initModality(Modality.APPLICATION_MODAL);
                         stage1.showAndWait();
 
