@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.beans.binding.Bindings;
+import javafx.beans.binding.NumberBinding;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -7,6 +9,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -16,8 +19,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Line;
 import javafx.stage.Modality;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -134,7 +139,8 @@ public class Controller implements Initializable {
         for (ImageView imageView : numbers) {
             imageView.setVisible(false);
         }
-        ru_button.setTranslateY(ru_button.getTranslateY()+150); en_button.setTranslateY(en_button.getTranslateY()+150);
+        //ru_button.setTranslateY(ru_button.getTranslateY()+150); en_button.setTranslateY(en_button.getTranslateY()+150);
+
 
 
         ObservableList<String> langs = FXCollections.observableArrayList(
@@ -223,44 +229,44 @@ public class Controller implements Initializable {
             }
         });
 
-        OnePuzzle pariet = new OnePuzzle(parietal, 391, 440);
-        setConditions(pariet, 710, 888, -322, -227, 782, -303);
+        OnePuzzle pariet = new OnePuzzle(parietal, 337, 392);
+        setConditions(pariet, 597, 701, -10, 32, 651, -4);
         puzzles.add(pariet);
 
-        OnePuzzle cerebel = new OnePuzzle(cerebellum, 327, 297);
-        setConditions(cerebel, 1226, 1392, 385, 524, 1308, 457);
+        OnePuzzle cerebel = new OnePuzzle(cerebellum, 277, 281);
+        setConditions(cerebel, 1006, 1072, -116, -22, 1039, -76);
         puzzles.add(cerebel);
 
-        OnePuzzle occipit = new OnePuzzle(occipital, 243, 363);
-        setConditions(occipit, 889, 961, 144, 266, 913, 209);
+        OnePuzzle occipit = new OnePuzzle(occipital, 209, 324);
+        setConditions(occipit, 1142, 1188, 138, 204, 1163, 165);
         puzzles.add(occipit);
 
-        OnePuzzle front = new OnePuzzle(frontal, 447, 512);
-        setConditions(front, 800, 925, -301, -224, 848, -298);
+        OnePuzzle front = new OnePuzzle(frontal, 377, 423);
+        setConditions(front, 330, 420, -226, -179, 366, -214);
         puzzles.add(front);
 
-        OnePuzzle brid = new OnePuzzle(bridge, 131, 167);
-        setConditions(brid, 813, 878, 393, 459, 837, 425);
+        OnePuzzle brid = new OnePuzzle(bridge, 116, 151);
+        setConditions(brid, 931, 967, 163, 206, 945, 184);
         puzzles.add(brid);
 
-        OnePuzzle med = new OnePuzzle(medulla, 218, 333);
-        setConditions(med, 859, 944, -73, 12, 890, 5);
+        OnePuzzle med = new OnePuzzle(medulla, 185, 297);
+        setConditions(med, 823, 869, 149, 196, 844, 190);
         puzzles.add(med);
 
-        OnePuzzle dience = new OnePuzzle(diencephalon, 515, 333);
-        setConditions(dience, 858, 1018, 41, 170, 937, 102);
+        OnePuzzle dience = new OnePuzzle(diencephalon, 438, 310);
+        setConditions(dience, 231, 310, -331, -236, 268, -298);
         puzzles.add(dience);
 
-        OnePuzzle mid = new OnePuzzle(midbrain, 202, 192);
-        setConditions(mid, 334, 422, -261, -185, 381, -233);
+        OnePuzzle mid = new OnePuzzle(midbrain, 164, 173);
+        setConditions(mid, 924, 962, -10, 6, 943, -2);
         puzzles.add(mid);
 
-        OnePuzzle th = new OnePuzzle(thalamus, 144, 151);
-        setConditions(th, 412, 437, 210, 231, 425, 221);
+        OnePuzzle th = new OnePuzzle(thalamus, 144, 158);
+        setConditions(th, 635, 651, -391, -373, 642, -383);
         puzzles.add(th);
 
-        OnePuzzle hypo = new OnePuzzle(hypothalamus, 131, 143);
-        setConditions(hypo, 244, 263, -100, -76, 251, -91);
+        OnePuzzle hypo = new OnePuzzle(hypothalamus, 128, 145);
+        setConditions(hypo, 670, 694, 300, 326, 682, 313);
         puzzles.add(hypo);
 
         button.setOnAction(new EventHandler<ActionEvent>() {
@@ -289,7 +295,7 @@ public class Controller implements Initializable {
                        // primaryStage.setScene(new Scene(root, 1800, 875));
                         stage1.getIcons().add(new Image("resources/icon.png"));
                         stage1.setResizable(false);
-                        stage1.setMaximized(true);
+                       // stage1.setMaximized(true);
                         stage1.initModality(Modality.APPLICATION_MODAL);
                         stage1.showAndWait();
                     } else {
@@ -312,7 +318,7 @@ public class Controller implements Initializable {
                         // primaryStage.setScene(new Scene(root, 1800, 875));
                         stage1.getIcons().add(new Image("resources/icon.png"));
                         stage1.setResizable(false);
-                        stage1.setMaximized(true);
+                       // stage1.setMaximized(true);
                         stage1.initModality(Modality.APPLICATION_MODAL);
                         stage1.showAndWait();
 
@@ -396,7 +402,7 @@ public class Controller implements Initializable {
 
                         }
 
-                        //System.out.println(onePuzzle.getImage().getTranslateX() + " " + onePuzzle.getImage().getTranslateY());
+                        System.out.println(onePuzzle.getImage().getTranslateX() + " " + onePuzzle.getImage().getTranslateY());
                         pane.getChildren().remove(image);
                         pane.getChildren().add(index.intValue(),image);
                     };

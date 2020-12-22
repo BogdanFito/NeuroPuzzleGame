@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane  prefHeight="875.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="768.0" prefWidth="1376.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="546.0" layoutY="337.0">
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="278.0" layoutY="276.0">
          <image>
             <Image url="@../resources/sad.png" />
          </image>
       </ImageView>
-        <Label alignment="CENTER" layoutX="766.0" layoutY="396.0" prefHeight="82.0" prefWidth="554.0" text="Неверно! Попробуйте еще раз!">
+        <Label alignment="CENTER" layoutX="510.0" layoutY="302.0" prefHeight="82.0" prefWidth="554.0" text="Неверно! Попробуйте еще раз!">
             <font>
                 <Font size="36.0" />
             </font>
         </Label>
-      <Button fx:id="button2" layoutX="797.0" layoutY="478.0" mnemonicParsing="false" onAction="#ttt" prefHeight="62.0" prefWidth="510.0" text="Попробовать еще раз">
+      <Button fx:id="button2" layoutX="532.0" layoutY="384.0" mnemonicParsing="false" onAction="#ttt" prefHeight="62.0" prefWidth="510.0" text="Попробовать еще раз">
          <font>
             <Font size="36.0" />
          </font>
