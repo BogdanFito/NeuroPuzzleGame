@@ -1,7 +1,5 @@
 package sample;
 
-import javafx.beans.binding.Bindings;
-import javafx.beans.binding.NumberBinding;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -9,7 +7,6 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -18,18 +15,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Line;
 import javafx.stage.Modality;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -99,8 +90,6 @@ public class Controller implements Initializable {
     @FXML RadioButton ru_button;
     @FXML RadioButton en_button;
 
-    //private final double cerebellum_height = 232.0;
-    // private final double cerebellum_width = 193.0;
 
     private double lastXPosition, lastYPosition;
     private double orgTranslateX, orgTranslateY;
@@ -110,9 +99,6 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        //cerebellum.setOnMousePressed(circleOnMousePressedEventHandler);
-        // cerebellum.setOnMouseDragged(circleOnMouseDraggedEventHandler);
-        // cerebellum.setOnMouseReleased(circleOnMouseReleasedEventHandler);
         table.setVisible(false);
         text.setVisible(false);
         button.setVisible(false);
@@ -131,7 +117,6 @@ public class Controller implements Initializable {
         numbers.add(ten);
 
         ToggleGroup group = new ToggleGroup();
-        // установка группы
         ru_button.setToggleGroup(group);
         en_button.setToggleGroup(group);
         ru_button.setSelected(true);
@@ -139,9 +124,6 @@ public class Controller implements Initializable {
         for (ImageView imageView : numbers) {
             imageView.setVisible(false);
         }
-        //ru_button.setTranslateY(ru_button.getTranslateY()+150); en_button.setTranslateY(en_button.getTranslateY()+150);
-
-
 
         ObservableList<String> langs = FXCollections.observableArrayList(
                 "Таламус",
@@ -191,15 +173,12 @@ public class Controller implements Initializable {
                 "Thalamus",
                 "Diencephalon");
 
-        // ComboBox<String> langsComboBox = new ComboBox<String>(langs);
-        // langsComboBox.setValue("Java");
-
         ObservableList<Data> data = FXCollections.observableArrayList();
         for (int i = 0; i < langs.size(); i++) {
             data.add(new Data(i + 1, new ComboBox<String>(langs)));
             data.get(data.size() - 1).getVariants().setPrefWidth(titles.getPrefWidth());
         }
-        // определяем фабрику для столбца с привязкой к свойству
+
         number.setCellValueFactory(new PropertyValueFactory<Data, String>("num"));
         titles.setCellValueFactory(new PropertyValueFactory<Data, Integer>("variants"));
         table.setItems(data);
@@ -277,12 +256,12 @@ public class Controller implements Initializable {
                     if (checkAnswers(data, rightAnswers) || checkAnswers(data, rightAnswers2)) {
                         //Close current
                          stage = (Stage) button.getScene().getWindow();
-                        // do what you have to do
+
                         stage.close();
                         FXMLLoader fxmlLoader;
                         if (ru_button.isSelected())  fxmlLoader = new FXMLLoader(getClass().getResource("/sample/OK.fxml"));
                         else  fxmlLoader = new FXMLLoader(getClass().getResource("/sample/OK2.fxml"));
-                        //Parent root1 = null;
+
                         try {
                             fxmlLoader.load();
                         } catch (IOException e) {
@@ -292,20 +271,19 @@ public class Controller implements Initializable {
                         Stage stage1 = new Stage();
                         stage1.setScene(new Scene(root));
                         stage1.setTitle("Neuro Puzzle");
-                       // primaryStage.setScene(new Scene(root, 1800, 875));
+
                         stage1.getIcons().add(new Image("resources/icon.png"));
                         stage1.setResizable(false);
-                       // stage1.setMaximized(true);
+
                         stage1.initModality(Modality.APPLICATION_MODAL);
                         stage1.showAndWait();
                     } else {
                          stage = (Stage) button.getScene().getWindow();
-                        // do what you have to do
-                        //stage.close();
+
                         FXMLLoader fxmlLoader;
                         if (ru_button.isSelected()) fxmlLoader = new FXMLLoader(getClass().getResource("/sample/Bad.fxml"));
                         else fxmlLoader = new FXMLLoader(getClass().getResource("/sample/Bad2.fxml"));
-                        //Parent root1 = null;
+
                         try {
                             fxmlLoader.load();
                         } catch (IOException e) {
@@ -318,7 +296,7 @@ public class Controller implements Initializable {
                         // primaryStage.setScene(new Scene(root, 1800, 875));
                         stage1.getIcons().add(new Image("resources/icon.png"));
                         stage1.setResizable(false);
-                       // stage1.setMaximized(true);
+
                         stage1.initModality(Modality.APPLICATION_MODAL);
                         stage1.showAndWait();
 
@@ -378,10 +356,6 @@ public class Controller implements Initializable {
 
             EventHandler<MouseEvent> circleOnMouseReleasedEventHandler =
                     t -> {
-               // boolean first = onePuzzle.getImage().getTranslateY() >= top;
-               // boolean second = onePuzzle.getImage().getTranslateY() <= bottom;
-               // boolean third = onePuzzle.getImage().getTranslateX() >= left;
-                //boolean fourth = cerebellum.getTranslateX() <= right;
 
                         if (image.getTranslateY() >= top &&
                                 image.getTranslateY() <= bottom &&
@@ -398,11 +372,11 @@ public class Controller implements Initializable {
                                 }
 
                             }
-                            //pane.getChildren().remove(image); pane.getChildren().add(index.intValue(),image);
+
 
                         }
 
-                        System.out.println(onePuzzle.getImage().getTranslateX() + " " + onePuzzle.getImage().getTranslateY());
+                       // System.out.println(onePuzzle.getImage().getTranslateX() + " " + onePuzzle.getImage().getTranslateY());
                         pane.getChildren().remove(image);
                         pane.getChildren().add(index.intValue(),image);
                     };
@@ -439,6 +413,5 @@ public class Controller implements Initializable {
         Stage stage1 = (Stage)button2.getScene().getWindow();
         stage1.close();
 
-       // stage.show();
     }
 }
