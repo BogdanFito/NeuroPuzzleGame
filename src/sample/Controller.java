@@ -119,7 +119,7 @@ public class Controller implements Initializable {
         ToggleGroup group = new ToggleGroup();
         ru_button.setToggleGroup(group);
         en_button.setToggleGroup(group);
-        ru_button.setSelected(true);
+        en_button.setSelected(true);
 
         for (ImageView imageView : numbers) {
             imageView.setVisible(false);
@@ -207,6 +207,16 @@ public class Controller implements Initializable {
                 data.get(data.size() - 1).getVariants().setPrefWidth(titles.getPrefWidth());
             }
         });
+
+        text.setText("Parts of the brain");
+        number.setText("Brain part number");
+        titles.setText("Name");
+        button.setText("Check answers");
+        data.clear();
+        for (int i = 0; i < langs.size(); i++) {
+            data.add(new Data(i + 1, new ComboBox<String>(langs2)));
+            data.get(data.size() - 1).getVariants().setPrefWidth(titles.getPrefWidth());
+        }
 
         OnePuzzle pariet = new OnePuzzle(parietal, 337, 392);
         setConditions(pariet, 597, 701, -10, 32, 651, -4);
